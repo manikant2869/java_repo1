@@ -6,6 +6,7 @@
     <artifactId>works-with-heroku</artifactId>
     <version>1.0</version>
     <packaging>war</packaging>
+     
     <properties>
          <maven.compiler.source>1.6</maven.compiler.source>
          <maven.compiler.target>1.6</maven.compiler.target>
@@ -59,4 +60,17 @@
             </plugin>
         </plugins>
     </build>
+         
+    <distributionManagement>
+             <repository>
+                      <id>nexus</id>
+                      <name>maven-remote-repository</name>
+                      <url>http://18.183.161.16:8081/repository/maven-web-applications/</url>
+             </repository>
+             <snapshotRepository>
+                      <id>nexus</id>
+                      <name>nexus-snapshot-repository</name>
+                      <url>http://18.183.161.16:8081/repository/maven-web-applications-snapshot/</url>
+             </snapshotRepository>
+         </distributionManagement>
 </project>
